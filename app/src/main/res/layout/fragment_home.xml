@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".mainApp.HomeFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/home_Title_Container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/md_theme_light_primary"
+        app:cardCornerRadius="@dimen/standart_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/wider_margin"
+        >
+
+        <TextView
+            android:id="@+id/home_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="@dimen/standart_title"
+            android:fontFamily="@font/montserrat_alternates_black"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/standart_margin"
+            />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/home_Daily_Text_Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daily calories limit left"
+        android:textSize="@dimen/standart_header"
+        android:textColor="@color/md_theme_light_primary"
+        android:fontFamily="@font/montserrat_alternates"
+        app:layout_constraintTop_toBottomOf="@id/home_Title_Container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/standart_margin"
+        />
+
+    <TextView
+        android:id="@+id/home_Daily_Text_Big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000"
+        android:textColor="@color/md_theme_light_primary"
+        android:textSize="@dimen/standart_title"
+        android:fontFamily="@font/montserrat_alternates_black"
+        app:layout_constraintTop_toBottomOf="@id/home_Daily_Text_Small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/home_Recent_Activity_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recent activity :"
+        android:textSize="@dimen/standart_header"
+        app:layout_constraintTop_toBottomOf="@id/home_Daily_Text_Big"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/md_theme_light_primary"
+        android:fontFamily="@font/montserrat_alternates_bold"
+        android:layout_margin="@dimen/standart_header"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_Recent_Rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:itemCount="3"
+        tools:listitem="@layout/recycler_activity_item"
+        app:layout_constraintTop_toBottomOf="@id/home_Recent_Activity_Text"
+        />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

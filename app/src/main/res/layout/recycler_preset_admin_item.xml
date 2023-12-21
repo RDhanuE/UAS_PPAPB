@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/standart_margin"
+    android:elevation="@dimen/little_gap"
+    android:id="@+id/preset_Container"
+    app:cardCornerRadius="@dimen/standart_margin"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/presetAdmin_Content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/little_gap"
+        >
+
+        <TextView
+            android:id="@+id/presetAdmin_Occasion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/presetAdmin_Type"
+            android:text="what is the occasion"
+            android:textSize="@dimen/standart_text"
+            android:textColor="@color/md_theme_light_primary"
+            android:fontFamily="@font/montserrat_alternates_bold"
+            />
+
+
+        <TextView
+            android:id="@+id/presetAdmin_Item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_alternates"
+            android:text="What is the item ?"
+            android:textColor="@color/md_theme_light_primary"
+            android:textSize="@dimen/standart_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/presetAdmin_Occasion"
+            />
+
+        <TextView
+            android:id="@+id/presetAdmin_Type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Intake / Outtake"
+            android:textSize="@dimen/standart_header"
+            android:textColor="@color/md_theme_light_primary"
+            android:fontFamily="@font/montserrat_alternates_black"
+            android:layout_marginEnd="@dimen/standart_margin"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/presetAdmin_Update_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="update"
+            app:srcCompat="@drawable/edit"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/presetAdmin_Delete_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@id/presetAdmin_Update_Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginHorizontal="@dimen/standart_margin"
+            android:contentDescription="delete"
+            app:srcCompat="@drawable/baseline_delete_24"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

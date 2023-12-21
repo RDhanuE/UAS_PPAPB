@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "153146089312",
+    "project_id": "calorify-2-0",
+    "storage_bucket": "calorify-2-0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:153146089312:android:cdeab1267852fae2bf8805",
+        "android_client_info": {
+          "package_name": "com.example.calorify20"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRBpXbAaXueG79w9NxtaYG5-LmCc0RsyA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

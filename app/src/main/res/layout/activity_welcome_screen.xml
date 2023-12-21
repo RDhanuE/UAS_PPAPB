@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mainApp.WelcomeScreen"
+    android:orientation="vertical"
+    android:background="@color/md_theme_light_primary"
+    >
+
+    <TextView
+        android:id="@+id/welcome_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:fontFamily="@font/montserrat_alternates_bold"
+        android:textSize="@dimen/standart_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/wider_margin"
+        android:textColor="@color/white"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/welcome_Image_Container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/welcome_Title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardCornerRadius="@dimen/wider_margin"
+        android:layout_marginTop="@dimen/standart_margin">
+
+        <ImageView
+            android:id="@+id/welcome_Image"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/healty_eating"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/welcome_Desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcome_Image_Container"
+        android:layout_marginTop="@dimen/big_margin"
+        android:textSize="@dimen/standart_text"
+        android:fontFamily="@font/montserrat_alternates"
+        android:textColor="@color/white"
+        android:paddingHorizontal="@dimen/standart_margin"
+        android:textAlignment="center"
+        android:text=" your personal guide to effortless calorie management. Seamlessly track your daily intake, set goals, and achieve a healthier lifestyle with our intuitive interface and robust features."
+        />
+
+    <Button
+        android:id="@+id/welcome_Button_Register"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/welcome_Desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="@dimen/standart_header"
+        android:text="Get Started"
+        android:fontFamily="@font/montserrat_alternates"
+        android:textColor="@color/md_theme_light_primary"
+        android:layout_marginTop="@dimen/big_margin"
+        />
+
+    <Button
+        android:id="@+id/welcome_Button_Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log In"
+        app:layout_constraintTop_toBottomOf="@id/welcome_Button_Register"
+        app:layout_constraintStart_toStartOf="@id/welcome_Button_Register"
+        app:layout_constraintEnd_toEndOf="@id/welcome_Button_Register"
+        android:textSize="@dimen/standart_header"
+        android:fontFamily="@font/montserrat_alternates"
+        android:layout_marginTop="@dimen/standart_margin"
+        android:paddingHorizontal="@dimen/big_margin"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

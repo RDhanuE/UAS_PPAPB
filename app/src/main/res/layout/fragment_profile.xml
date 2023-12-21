@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".mainApp.ProfileFragment"
+    android:gravity="center">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profile_Picture_Container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="@dimen/wider_margin"
+        app:cardCornerRadius="@dimen/wider_margin"
+        android:backgroundTint="@color/md_theme_light_secondaryContainer"
+        >
+
+        <ImageView
+            android:id="@+id/profile_Picture"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/baseline_person_outline_24"
+            android:padding="@dimen/little_gap"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/profile_Username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/profile_Picture_Container"
+        app:layout_constraintBottom_toBottomOf="@id/profile_Picture_Container"
+        app:layout_constraintStart_toEndOf="@id/profile_Picture_Container"
+        android:text="Username"
+        android:textSize="@dimen/standart_header"
+        android:textColor="@color/md_theme_light_primary"
+        android:fontFamily="@font/montserrat_alternates"
+        android:layout_margin="@dimen/standart_margin"
+        />
+
+    <RelativeLayout
+        android:id="@+id/profile_Data_Relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_Picture_Container"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profile_Data_Container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/standart_margin"
+            android:layout_marginTop="@dimen/wider_margin"
+            android:backgroundTint="@color/md_theme_light_secondaryContainer"
+            app:cardCornerRadius="@dimen/little_gap"
+            app:cardElevation="@dimen/standart_margin"
+            app:cardUseCompatPadding="true"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile_Data_Layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/standart_margin"
+        >
+
+            <LinearLayout
+                android:id="@+id/profile_Data_Height_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:weightSum="2"
+                android:layout_marginVertical="@dimen/little_gap"
+                >
+
+                <TextView
+                    android:id="@+id/profile_Data_Height_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Height"
+                    android:textSize="@dimen/standart_text"
+                    android:textColor="@color/md_theme_light_primary"
+                    android:fontFamily="@font/montserrat_alternates"
+                    />
+
+                <TextView
+                    android:id="@+id/profile_Data_Height_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="00cm"
+                    android:textSize="@dimen/standart_text"
+                    android:textColor="@color/md_theme_light_primary"
+                    android:fontFamily="@font/montserrat_alternates_bold"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/profile_Data_Weight_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/profile_Data_Height_Layout"
+                app:layout_constraintStart_toStartOf="parent"
+                android:weightSum="2"
+                android:layout_marginVertical="@dimen/little_gap"
+                >
+
+                <TextView
+                    android:id="@+id/profile_Data_Weight_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Weight"
+                    android:textSize="@dimen/standart_text"
+                    android:textColor="@color/md_theme_light_primary"
+                    android:fontFamily="@font/montserrat_alternates"
+                    />
+
+                <TextView
+                    android:id="@+id/profile_Data_Weight_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="00kg"
+                    android:textSize="@dimen/standart_text"
+                    android:textColor="@color/md_theme_light_primary"
+                    android:fontFamily="@font/montserrat_alternates_bold"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/profile_Data_Goal_Weight_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/profile_Data_Weight_Layout"
+                app:layout_constraintStart_toStartOf="parent"
+                android:weightSum="2"
+                android:layout_marginVertical="@dimen/little_gap"
+                >
+
+                <TextView
+                    android:id="@+id/profile_Data_Goal_Weight_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Goal's Weight"
+                    android:textSize="@dimen/standart_text"
+                    android:textColor="@color/md_theme_light_primary"
+                    android:fontFamily="@font/montserrat_alternates"
+                    />
+
+                <TextView
+                    android:id="@+id/profile_Data_Goal_Weight_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="00kg"
+                    android:textSize="@dimen/standart_text"
+                    android:textColor="@color/md_theme_light_primary"
+                    android:fontFamily="@font/montserrat_alternates_bold"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/profile_Data_Goal_Date_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/profile_Data_Goal_Weight_Layout"
+                app:layout_constraintStart_toStartOf="parent"
+                android:weightSum="2"
+                android:layout_marginVertical="@dimen/little_gap"
+                >
+
+                <TextView
+                    android:id="@+id/profile_Data_Goal_Date_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Goal's Date"
+                    android:textSize="@dimen/standart_text"
+                    android:textColor="@color/md_theme_light_primary"
+                    android:fontFamily="@font/montserrat_alternates"
+                    />
+
+                <TextView
+                    android:id="@+id/profile_Data_Goal_Date_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="01-01-2000"
+                    android:textSize="@dimen/standart_text"
+                    android:textColor="@color/md_theme_light_primary"
+                    android:fontFamily="@font/montserrat_alternates_bold"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/profile_Data_Calory_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/profile_Data_Goal_Date_Layout"
+                app:layout_constraintStart_toStartOf="parent"
+                android:weightSum="2"
+                android:layout_marginVertical="@dimen/little_gap"
+                >
+
+                <TextView
+                    android:id="@+id/profile_Data_Calory_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Daily Calory"
+                    android:textSize="@dimen/standart_text"
+                    android:textColor="@color/md_theme_light_primary"
+                    android:fontFamily="@font/montserrat_alternates"
+                    />
+
+                <TextView
+                    android:id="@+id/profile_Data_Calory_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="00"
+                    android:textSize="@dimen/standart_text"
+                    android:textColor="@color/md_theme_light_primary"
+                    android:fontFamily="@font/montserrat_alternates_bold"
+                    />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/profile_Edit_Button"
+        style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="10dp"
+        android:text="EDIT"
+        android:textColor="@color/md_theme_light_primary"
+        android:textSize="@dimen/standart_margin"
+        app:icon="@drawable/edit"
+        android:layout_marginEnd="@dimen/big_margin"
+        app:layout_constraintBottom_toBottomOf="@id/profile_Data_Relative"
+        app:layout_constraintEnd_toEndOf="@id/profile_Data_Relative"
+        />
+
+    <Button
+        android:id="@+id/profile_Sign_Out_Button"
+        style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SIGN OUT"
+        android:textSize="@dimen/standart_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_Data_Relative"
+        app:icon = "@drawable/sign_out_svgrepo_com"
+        android:layout_margin="@dimen/wider_margin"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

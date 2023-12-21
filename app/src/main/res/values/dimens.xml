@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="standart_margin">16dp</dimen>
+    <dimen name="wider_margin">32dp</dimen>
+    <dimen name="big_margin">48dp</dimen>
+    <dimen name="even_bigger_margin">64dp</dimen>
+    <dimen name="standart_title">36dp</dimen>
+    <dimen name="standart_header_2">28dp</dimen>
+    <dimen name="standart_header">20dp</dimen>
+    <dimen name="standart_text">14dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="little_gap">8dp</dimen>
+
+</resources>

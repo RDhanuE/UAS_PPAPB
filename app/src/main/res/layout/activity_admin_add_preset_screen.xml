@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.AdminAddPresetScreen">
+
+    <TextView
+        android:id="@+id/adminAdd_Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Add New Preset"
+        android:textSize="@dimen/standart_header_2"
+        android:fontFamily="@font/montserrat_alternates_bold"
+        android:textColor="@color/md_theme_light_primary"
+        android:textAlignment="center"
+        android:layout_marginHorizontal="@dimen/standart_margin"
+        android:layout_marginTop="@dimen/big_margin"
+        />
+
+    <LinearLayout
+        android:id="@+id/adminAdd_Form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/adminAdd_Title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/adminAdd_Button"
+        android:gravity="center"
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/adminAdd_Type_Container"
+            style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type"
+            android:textColorHint="@color/md_theme_light_primary"
+            app:boxBackgroundColor="@color/md_theme_light_secondaryContainer"
+            android:layout_marginHorizontal="@dimen/standart_margin"
+            >
+
+            <AutoCompleteTextView
+                android:id="@+id/adminAdd_Type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                app:simpleItems="@array/Type"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/adminAdd_Occasion_Container"
+            style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Occasion"
+            android:textColorHint="@color/md_theme_light_primary"
+            app:boxBackgroundColor="@color/md_theme_light_secondaryContainer"
+            android:layout_marginHorizontal="@dimen/standart_margin"
+            android:layout_marginTop="@dimen/standart_margin"
+            android:enabled="false"
+            >
+
+            <AutoCompleteTextView
+                android:id="@+id/adminAdd_Occasion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="?attr/textInputFilledStyle"
+            android:id="@+id/adminAdd_Item_Container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/standart_margin"
+            android:layout_marginTop="@dimen/standart_margin"
+            android:hint="Item / Activity"
+            android:textColorHint="@color/md_theme_light_primary"
+            app:layout_constraintTop_toBottomOf="@id/login_Title"
+            app:boxBackgroundColor="@color/md_theme_light_secondaryContainer"
+            android:enabled="false"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/adminAdd_Item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/adminAdd_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="@dimen/standart_margin"
+        android:layout_marginBottom="@dimen/wider_margin"
+        android:text="Add Preset"
+        android:textSize="@dimen/standart_header"
+        android:fontFamily="@font/montserrat_alternates_bold"
+        android:padding="@dimen/little_gap"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

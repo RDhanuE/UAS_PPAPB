@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mainApp.SplashScreen"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/healty_icon"
+        android:layout_marginBottom="@dimen/standart_margin"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/standart_margin"
+        android:fontFamily="@font/montserrat_alternates_bold"
+        android:text="@string/app_name"
+        android:textColor="@color/md_theme_light_primary"
+        android:textSize="32dp" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:indeterminate="true"
+        />
+
+</LinearLayout> 

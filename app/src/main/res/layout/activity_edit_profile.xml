@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mainApp.EditProfileActivity">
+
+    <TextView
+        android:id="@+id/profile_Edit_Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        android:textSize="@dimen/standart_title"
+        android:textAlignment="center"
+        android:fontFamily="@font/montserrat_alternates_black"
+        android:textColor="@color/md_theme_light_primary"
+        android:layout_margin="@dimen/wider_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="?attr/textInputFilledStyle"
+        android:id="@+id/profileEdit_Username_Container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/standart_margin"
+        android:hint="Username"
+        app:boxBackgroundColor="@color/md_theme_light_secondaryContainer"
+        app:layout_constraintTop_toBottomOf="@id/profile_Edit_Title"
+        android:layout_marginTop="@dimen/big_margin"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/profileEdit_Username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="?attr/textInputFilledStyle"
+        android:id="@+id/profileEdit_Current_Height_Container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/standart_margin"
+        android:hint="Current Height"
+        app:boxBackgroundColor="@color/md_theme_light_secondaryContainer"
+        android:layout_marginTop="@dimen/standart_margin"
+        app:suffixText="cm"
+        app:layout_constraintTop_toBottomOf="@id/profileEdit_Username_Container"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/profileEdit_Current_Height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="?attr/textInputFilledStyle"
+        android:id="@+id/profileEdit_Current_Weight_Container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/standart_margin"
+        android:hint="Current Weight"
+        app:boxBackgroundColor="@color/md_theme_light_secondaryContainer"
+        app:layout_constraintTop_toBottomOf="@id/profileEdit_Current_Height_Container"
+        android:layout_marginTop="@dimen/standart_margin"
+        app:suffixText="Kg"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/profileEdit_Current_Weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="?attr/textInputFilledStyle"
+        android:id="@+id/profileEdit_Goal_Weight_Container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/standart_margin"
+        android:hint="Goal's Weight"
+        app:boxBackgroundColor="@color/md_theme_light_secondaryContainer"
+        app:layout_constraintTop_toBottomOf="@id/profileEdit_Current_Weight_Container"
+        android:layout_marginTop="@dimen/standart_margin"
+        app:suffixText="Kg"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/profileEdit_Goal_Weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="?attr/textInputFilledStyle"
+        android:id="@+id/profileEdit_Calory_Container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/standart_margin"
+        android:hint="Daily Calory Goals"
+        app:boxBackgroundColor="@color/md_theme_light_secondaryContainer"
+        app:layout_constraintTop_toBottomOf="@id/profileEdit_Goal_Weight_Container"
+        android:layout_marginTop="@dimen/standart_margin"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/profileEdit_Calory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="?attr/textInputFilledStyle"
+        android:id="@+id/profileEdit_Date_Picker_Container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/standart_margin"
+        android:hint="Goal's Date"
+        app:boxBackgroundColor="@color/md_theme_light_secondaryContainer"
+        app:layout_constraintTop_toBottomOf="@id/profileEdit_Calory_Container"
+        android:layout_marginTop="@dimen/standart_margin"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/baseline_calendar_month_24"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/profileEdit_Date_Picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:inputType="none"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/profile_Edit_Button"
+        style="@style/Widget.Material3.Button.TonalButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/big_margin"
+        android:layout_marginBottom="@dimen/big_margin"
+        android:layout_marginHorizontal="@dimen/standart_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Confirm"
+        android:textSize="@dimen/standart_header"
+        android:fontFamily="@font/montserrat_alternates"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
